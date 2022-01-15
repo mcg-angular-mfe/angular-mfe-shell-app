@@ -1,5 +1,5 @@
 {
-    "shell": {
-        "shell_welcome": "Welcome to the Shell app"
-    }
+
+    "welcome": "Welcome to the Shell app"
+
 }

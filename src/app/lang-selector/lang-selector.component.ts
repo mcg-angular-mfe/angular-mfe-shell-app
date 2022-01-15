@@ -23,6 +23,9 @@ export class LangSelectorComponent implements OnInit {
 
     localStorage.setItem('lang', lang);
     this.translateService.use(lang || 'pt');
+
+    const event = new CustomEvent('changeLang', { detail: lang });
+    document.dispatchEvent(event);
   }
 
 }
