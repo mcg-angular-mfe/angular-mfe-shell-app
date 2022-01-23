@@ -16,12 +16,30 @@ const routes: Routes = [
         remoteEntry: 'http://localhost:3001/remoteEntry.js',
         exposedModule: './Module'
       })
-      .then(m => m.AppModule)
-      .catch(err => {
+      .then(m => m.Mfe1Module)
+      .catch(() => {
         return import('./page-not-found/page-not-found.module')
         .then(m => m.PageNotFoundModule)
       }) 
   },
+  // {
+  //   path: 'test',
+  //   children: [
+  //     {
+  //       path: 'test-mfe',
+  //       loadChildren: () => loadRemoteModule({
+  //         type: 'module',
+  //         remoteEntry: 'http://localhost:3001/remoteEntry.js',
+  //         exposedModule: './Module'
+  //       })
+  //       .then(m => m.Mfe1Module)
+  //       .catch(err => {
+  //         return import('./page-not-found/page-not-found.module')
+  //         .then(m => m.PageNotFoundModule)
+  //       }) 
+  //     }
+  //   ]
+  // }
 ];
 
 @NgModule({
